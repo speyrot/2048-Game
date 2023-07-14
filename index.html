@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>2048</title>
+</head>
+<body>
+    
+    <div class="container hide">
+
+        <div class="heading">
+
+            <h1>2048</h1>
+
+            <div class="score-container">
+                Score:
+                <span id="score">0</span>
+            </div>
+
+        </div>
+        
+        <div class="grid"></div>
+        
+    </div>
+
+    <div class="cover-screen">
+
+        <h2 id="over-text" class="hide">Game Over</h2>
+
+        <p id="result"></p>
+        
+        <button id="start-button">Start Game</button>
+
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
