@@ -12,6 +12,10 @@ const result = document.getElementById("result");
 
 const overText = document.getElementById("over-text");
 
+//Prevent Scrolling on Touch
+document.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+}, { passive: false });
 
 //Basic setups
 
@@ -352,25 +356,26 @@ grid.addEventListener("touchstart", (event) => {
 });
 
 grid.addEventListener("touchmove", (event) => {
+  if (!isSwiped) return;
+  
+  getXY(event);
 
-    if (isSwiped) {
-
-        getXY(event);
-
-        let diffX = touchX - initialX;
-
-        let diffY = touchY - initialY;
-
-        if (Math.abs(diffY) > Math.abs(diffX)) {
-            
-            swipeDirection = diffX > 0 ? "down" : "up";
-
-        } else {
-
-            swipeDirection = diffY > 0 ? "right" : "left";
-
-        }
-    }
+  const deltaX = touchX - initialX;
+  const deltaY = touchY - initialY;
+  
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+          swipeDirection = "right";
+      } else {
+          swipeDirection = "left";
+      }
+  } else {
+      if (deltaY > 0) {
+          swipeDirection = "down";
+      } else {
+          swipeDirection = "up";
+      }
+  }
 });
 
 grid.addEventListener("touchend", () => {
@@ -390,6 +395,7 @@ grid.addEventListener("touchend", () => {
   }
   document.getElementById("score").innerText = score;
   swipeDirection = "";
+  isSwiped = false;
 });
 
 
