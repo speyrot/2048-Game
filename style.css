@@ -9,6 +9,10 @@ body {
     background-color: #faf8ef;
 }
 
+.app {
+    padding: 2px;
+}
+
 .heading {
     display: flex;
     align-items: center;
