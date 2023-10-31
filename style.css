@@ -9,10 +9,6 @@ body {
     background-color: #faf8ef;
 }
 
-.app {
-    padding: 2px;
-}
-
 .heading {
     display: flex;
     align-items: center;
@@ -40,8 +36,8 @@ h1 {
 }
 
 .grid {
-    width: 25em;
-    height: 25em;
+    width: 20em;
+    height: 20em;
     background-color: #cdc1b5;
     border: 5px solid #bbada0;
     margin: 0 auto;
@@ -51,8 +47,8 @@ h1 {
 }
 
 .box {
-    width: 97.5px;
-    height: 97.5px;
+    width: 77.5078px;
+    height: 77.5078px;
     border: 5px solid #bbada0;
     font-size: 40px;
 }
