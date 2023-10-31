@@ -135,3 +135,20 @@ h1 {
     background-color: #ecc230;
     color: white;
 }
+
+@media (max-width: 600px) {
+    .grid {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .box {
+        width: calc(22.5vw - 10px);  /* subtract the border */
+        height: calc(22.5vw - 10px);
+        font-size: 2.5vw;
+    }
+}
