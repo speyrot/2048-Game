@@ -373,6 +373,25 @@ grid.addEventListener("touchmove", (event) => {
     }
 });
 
+grid.addEventListener("touchend", () => {
+  switch (swipeDirection) {
+      case "left":
+          slideLeft();
+          break;
+      case "right":
+          slideRight();
+          break;
+      case "up":
+          slideUp();
+          break;
+      case "down":
+          slideDown();
+          break;
+  }
+  document.getElementById("score").innerText = score;
+  swipeDirection = "";
+});
+
 
 //Start Function
 
